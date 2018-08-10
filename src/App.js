@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Navigator from './navigation'
 import ParallaxMap from './ParallaxMap'
 
 export class App extends Component {

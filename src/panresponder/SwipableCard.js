@@ -1,30 +1,30 @@
-import React, {Component} from "react";
-import {Animated, Dimensions, PanResponder} from 'react-native';
-import {Body, Card, CardItem, Text, View} from "native-base";
+import React, { Component } from 'react'
+import { Animated, Dimensions, PanResponder } from 'react-native'
+import { Body, Card, CardItem, Text, View } from 'native-base'
 
 export class SwipeableCard extends Component {
-  translateX = new Animated.Value(0);
+  translateX = new Animated.Value(0)
   _panResponder = PanResponder.create({
     onMoveShouldSetResponderCapture: () => true,
     onMoveShouldSetPanResponderCapture: () => true,
     onPanResponderMove: Animated.event([null, {dx: this.translateX}]),
     onPanResponderRelease: (e, {vx, dx}) => {
-      const screenWidth = Dimensions.get("window").width;
+      const screenWidth = Dimensions.get('window').width
       if (Math.abs(vx) >= 0.5 || Math.abs(dx) >= 0.5 * screenWidth) {
         Animated.timing(this.translateX, {
           toValue: dx > 0 ? screenWidth : -screenWidth,
           duration: 200
-        }).start(this.props.onDismiss);
+        }).start(this.props.onDismiss)
       } else {
         Animated.spring(this.translateX, {
           toValue: 0,
           bounciness: 10
-        }).start();
+        }).start()
       }
     }
-  });
+  })
 
-  render() {
+  render () {
     return (
       <View>
         <Animated.View
@@ -42,6 +42,6 @@ export class SwipeableCard extends Component {
         </Animated.View>
       </View>
 
-    );
+    )
   }
 }

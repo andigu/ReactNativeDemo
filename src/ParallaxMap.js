@@ -76,15 +76,15 @@ export default class MyApp extends Component {
         </View>
       </Animated.ScrollView>
       <Animated.View style={{
-        width: "100%",
-        position: "absolute",
+        width: '100%',
+        position: 'absolute',
         transform: [{
           translateY: this.headerY
         }],
         flex: 1,
         backgroundColor: 'transparent'
       }}>
-        <Header androidStatusBarColor={'#81c784'} style={{backgroundColor:'#98e59b'}} backgroundColor={'#98e59b'}>
+        <Header androidStatusBarColor={'#81c784'} style={{backgroundColor: '#98e59b'}} backgroundColor={'#98e59b'}>
           <Body>
           <Title style={{color: 'white'}}>
             McDonalds

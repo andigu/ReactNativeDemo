@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Animated, Easing, StyleSheet, View, Dimensions } from 'react-native'
+import { Animated, Dimensions, Easing, StyleSheet, View } from 'react-native'
 import { Transitioner } from 'react-navigation'
 
-const {height: screenHeight} = Dimensions.get('window');
+const {height: screenHeight} = Dimensions.get('window')
 
 export default class BubbleTransition extends Component {
   renderScene = ({position}, {index, key, route}) => {

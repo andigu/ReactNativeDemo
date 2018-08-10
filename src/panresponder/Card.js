@@ -1,22 +1,22 @@
-import React, {Component} from "react";
-import {Dimensions, Text, View} from "react-native";
-import {Col, Grid, Icon, Row} from "native-base";
+import React, { Component } from 'react'
+import { Dimensions, Text, View } from 'react-native'
+import { Col, Grid, Icon, Row } from 'native-base'
 
-const {width: screenWidth} = Dimensions.get("window");
+const {width: screenWidth} = Dimensions.get('window')
 
 export class Card extends Component {
-  render() {
-    const center = {justifyContent: "center", alignItems: "center"};
-    const vertCenter = {alignItems: "center"};
-    const icon = {color: "#9b9b9b", fontSize: 40};
-    const text = {fontSize: 20, color: this.props.color};
+  render () {
+    const center = {justifyContent: 'center', alignItems: 'center'}
+    const vertCenter = {alignItems: 'center'}
+    const icon = {color: '#9b9b9b', fontSize: 40}
+    const text = {fontSize: 20, color: this.props.color}
     return <View style={{
       width: screenWidth,
       height: 250,
       borderRadius: 10,
       borderWidth: 7,
       borderColor: this.props.color,
-      backgroundColor: "white"
+      backgroundColor: 'white'
     }}>
       <Grid>
         <Col size={1}>
@@ -32,8 +32,8 @@ export class Card extends Component {
         </Col>
         <Col size={3}>
           <Row style={vertCenter}>
-            <View style={{flexDirection: "column"}}>
-              <Text style={{fontSize: 25, fontWeight: "800"}}>John Smith</Text>
+            <View style={{flexDirection: 'column'}}>
+              <Text style={{fontSize: 25, fontWeight: '800'}}>John Smith</Text>
               <Text style={text}>Marketing Head</Text>
             </View>
           </Row>
